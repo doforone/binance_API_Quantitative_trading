@@ -1,0 +1,45 @@
+{
+    "interval": "30m",
+    "AA": 3,
+    "VV": 3,
+    "AB": 1,
+    "MN": 6,
+    "symbols": {
+        "BTC": {
+            "minQty": "0.000001",
+            "minNotional": "10.00000000",
+            "maxQty": "114.46460923",
+            "buy_usdt": 1500,
+            "balances": "0.03019248",
+            "kline_id": 1630418410.4375,
+            "kline_result": 0,
+            "buy_price": 49594.26,
+            "sub_price": 175.86999999999534,
+            "oth": 0
+        },
+        "ETH": {
+            "minQty": "0.00001",
+            "minNotional": "10.00000000",
+            "maxQty": "2788.47346152",
+            "buy_usdt": 1500,
+            "balances": "0.46155670",
+            "kline_id": 1630418410.4531252,
+            "kline_result": -1,
+            "buy_price": 3250.14,
+            "sub_price": 35.11000000000013,
+            "oth": 0
+        },
+        "MATIC": {
+            "minQty": "0.1",
+            "minNotional": "10.00000000",
+            "maxQty": "5420902.56831132",
+            "buy_usdt": 1500,
+            "balances": "928.30782000",
+            "kline_id": 1630418410.4531252,
+            "kline_result": 0,
+            "buy_price": 1.61231,
+            "sub_price": 0.011730000000000018,
+            "oth": 0
+        }
+    }
+}
