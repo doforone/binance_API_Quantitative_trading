@@ -1,0 +1,42 @@
+{
+    "interval": "60min",
+    "AA": 3.0,
+    "VV": 3,
+    "AB": 1,
+    "MN": 47,
+    "symbols": {
+        "btc": {
+            "amount-precision": "0.000001",
+            "sell-market-min-order-amt": 0.0001,
+            "buy_usdt": 500,
+            "balances": "0.075173460580487521",
+            "kline_id": 1621951207.9158046,
+            "kline_result": 0,
+            "buy_price": 0,
+            "sub_price": 0,
+            "oth": 0
+        },
+        "eth": {
+            "amount-precision": "0.0001",
+            "sell-market-min-order-amt": 0.001,
+            "buy_usdt": 500,
+            "balances": "0.201605534289747132",
+            "kline_id": 1621951207.9314296,
+            "kline_result": 0,
+            "buy_price": 3473.7,
+            "sub_price": 132.08000000000038,
+            "oth": 0
+        },
+        "matic": {
+            "amount-precision": "0.0001",
+            "sell-market-min-order-amt": 0.1,
+            "buy_usdt": 500,
+            "balances": "0.000059708088099132",
+            "kline_id": 1621951207.9158046,
+            "kline_result": 0,
+            "buy_price": 0,
+            "sub_price": 0,
+            "oth": 0
+        }
+    }
+}
