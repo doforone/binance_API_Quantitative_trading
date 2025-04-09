@@ -1,0 +1,1 @@
+python E:\python3.4\±Ò°²\new\index2.py
