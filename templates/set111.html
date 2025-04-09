@@ -1,0 +1,29 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<title>币安现货策略1设置</title>
+</head>
+
+<body>
+
+<p align="center">币安现货策略1设置</p>
+<form method="POST" action="/set111_prg/">
+	<p style=line-height:2>交易对：<input type="text" name="symbol" size="6"  value="{{symbol}}" maxlength="6">USDT<br>
+	<input type="radio" value="1" {%if on=="1"%}checked {%endif%}name="R1" id=r11><label for=r11>开启</label>&nbsp; <input type="radio" name="R1" {%if on=="0"%}checked {%endif%}value="0" id=r12><label for=r12>关闭</label><br>
+	基价<input type="text" name="p" size="10" value="{{symbol_config["p"]}}" maxlength="10">(USDT)<br>
+	幅度<input type="text" name="per" size="4"  value="{{symbol_config["per"]}}" maxlength="4">% （上涨卖出，下跌买入）<br>
+	下单单位<select size="1" name="q_type">
+	<option value="b" {% if symbol_config["q_type"]=="b" %}selected{% endif %}>{{symbol}}</option>
+	<option value="q" {% if symbol_config["q_type"]=="q" %}selected{% endif %}>USDT</option>
+	</select> 下单量<input type="text" name="q" size="10"  value="{{symbol_config["q"]}}" maxlength="10"><br>
+	买单再确认：<input type="radio" value="60" {%if symbol_config["again"]==60%}checked {%endif%}name="R2" id=r21><label for=r21>无</label>&nbsp; <input type="radio" value="300" {%if symbol_config["again"]==300%}checked {%endif%}name="R2" id=r22><label for=r22>5分钟</label>&nbsp; <input type="radio" value="900" {%if symbol_config["again"]==900%}checked {%endif%}name="R2" id=r23><label for=r23>15分钟</label>&nbsp; <input type="radio" value="1800" {%if symbol_config["again"]==1800%}checked {%endif%}name="R2" id=r24><label for=r24>30分钟</label>&nbsp; <input type="radio" value="3600" {%if symbol_config["again"]==3600%}checked {%endif%}name="R2" id=r25><label for=r25>60分钟</label></p>
+	<p><input type="submit" value="提  交" name="B1"></p>
+	<p>提示：提交后，有些值可能会按交易所的过滤规则进行微调，你可在重新设定时查看。</p>
+</form>
+
+</body>
+
+</html>

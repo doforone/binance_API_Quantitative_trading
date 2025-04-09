@@ -1,0 +1,36 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<title>量化策略选择操作</title>
+</head>
+
+<body>
+
+  {% with messages = get_flashed_messages() %}
+     {% if messages %}
+        <ul>
+           {% for message in messages %}
+           <li><font color=red>{{ message }}</font></li>
+           {% endfor %}
+        </ul>
+     {% endif %}
+  {% endwith %}
+
+<p align="center">用户名：<b>{{session["account"]}}</b>　，系统：<b>{%if session["on"]==1%}已开启{%else%}已关闭{%endif%}</b></p>
+<p align="center"><a href="/pw/">开启或关闭系统与修改密码及设定“API_Key”和“Secret_Key”</a></p>
+<p align="center">币安现货量化交易策略1，设定交易对（***USDT）：
+{% for symbol in symbols0 %}
+	{% if symbol in symbols1.keys() %}
+		&nbsp;&nbsp;<a href="/set111/?symbol={{symbol}}&on=1">{{symbol}}（已设定）</a>
+	{% else %}
+		&nbsp;&nbsp;<a href="/set111/?symbol={{symbol}}&on=0">{{symbol}}</a>
+	{% endif %}
+{% endfor %}
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<title>火币余额</title>
+</head>
+
+<body>
+
+<p align="center">火币：{{ddd3}}<br/>USDT余额：{{ddd["usdt"]}}<br/>资产总额（美元）：{{ddd["total_CNY"]}}<br/>资产总额（BTC）：{{ddd["total_BTC"]}}</p>
+
+{%for dd in ddd2%}
+	<p>{{dd}}</p>
+{%endfor%}
+
+</body>
+
+</html>

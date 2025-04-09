@@ -1,0 +1,27 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<title>开启或关停系统或修改密码及设定“API_Key”和“Secret_Key”</title>
+</head>
+
+<body>
+<p align="center"><br>开启或关停系统或修改密码及设定“API_Key”和“Secret_Key”<br></p>
+<form method="POST" action="/pw_prg/">
+	<p align="center">账号：{{session["account"]}}，<input type="radio" value="1" {%if session["on"]==1%}checked {%endif%}name="R1" id=r11><label for=r11>开启</label>&nbsp; <input type="radio" name="R1" {%if session["on"]==0%}checked {%endif%}value="0" id=r12><label for=r12>关闭</label></p>
+	<p align="center">API_Key：<input type="text" name="API_Key" size="20" maxlength="80" value="{{session["API_Key"]}}"></p>
+	<p align="center">Secret_Key：<input type="text" name="Secret_Key" size="20" maxlength="80" value="{{session["Secret_Key"]}}"></p>
+	<p align="center">修改密码：<input type="password" name="pw" size="20" maxlength="20"></p>
+	<p align="center">校验密码：<input type="password" name="pw2" size="20" maxlength="20"></p>
+	<p align="center">提示：密码为空，将不修改密码。</p>
+	{%if title!=""%}
+	<p align="center"><font color=red>{{title}}</font></p>
+	{%endif%}
+	<p align="center"><input type="submit" value="登  录" name="B1"></p>
+</form>
+
+</body>
+
+</html>
